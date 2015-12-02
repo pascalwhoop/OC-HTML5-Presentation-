@@ -4,6 +4,7 @@ Reveal.initialize({
     height: 1080,
     margin: 0.2,
 
+    previewLinks: false,
     controls: true,
     progress: true,
     history: true,
@@ -30,10 +31,10 @@ Reveal.initialize({
         } },
         { src: 'js/notes/notes.js', async: true, condition: function () {
             return !!document.body.classList;
-        } },
+        } }/*,
          { src: 'js/remotes/remotes.js', async: true, condition: function () {
          return !!document.body.classList;
-         } }
+         } }*/
 
     ]
 });

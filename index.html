@@ -41,18 +41,18 @@
 
         <section>
             <h1>IoT Cloud Comparison</h1>
-			
+
             <img src="css/imagebilder.png" alt="Imagebilder">
-            
+
             <p>
                 Pascal Brokmeier
             </p>
         </section>
 
         <section>
-            <section>
-                <h2>Story</h2>
-                <img src="images/gorilla_office.jpg" class="stretch" alt="">
+            <section data-background="images/windows.jpg">
+                <h2>Story &nbsp;&nbsp;&nbsp;<br>&nbsp;<br>&nbsp;<br></h2>
+                <!--    <img src="images/gorilla_office.jpg" class="stretch" alt="">-->
 
                 <aside class="notes">
                     <ul>
@@ -66,59 +66,254 @@
                 <h3>Situation</h3>
                 <ul>
                     <li><span class="bold">Rolle:</span> <span class="fragment">Solution Architekt</span></li>
-                    <li><span class="bold">Neues Kundenprojekt:</span> <span class="fragment">IoT, Cloud, 10.000 Devices</span></li>
-                    <li><span class="bold">Aufgabe:</span> <span class="fragment">Entwicklung des Systems, anschließender Wartungsvertrag</span></li>
-                    <li><span class="bold">Bestehende Kompetenzen:</span> <span class="fragment">Java, C++, NodeJS, etwas Web, Integration, DB Spezialisten, ...</span></li>
+                    <li><span class="bold">Neues Kundenprojekt:</span> <span
+                            class="fragment">IoT, Cloud, 10.000 Devices</span></li>
+                    <li><span class="bold">Aufgabe:</span> <span class="fragment">Entwicklung des Systems, anschließender Wartungsvertrag</span>
+                    </li>
+                    <li><span class="bold">Bestehende Kompetenzen:</span> <span class="fragment">Java, C++, NodeJS, etwas Web, Integration, DB Spezialisten, ...</span>
+                    </li>
                 </ul>
+            </section>
+
+            <section>
+                <img src="images/iot-hype-cycle.gif" alt="" height="800px;">
             </section>
 
             <section>
                 <h3>Fragen</h3>
                 <ul>
-                    <li><class class="bold">Welcher Cloud Anbieter? </class> <span class="fragment">IBM, Google, Amazon, Microsoft, Oracle, ...</span></li>
-                    <li><span class="bold">Plattformkonzept? </span><span class="fragment">Oracle à la Suite in the Cloud vs. Marketplace vs. Community based </span></li>
-                    <li><span class="bold">Welches Preismodell? </span> <class class="fragment">Per device / message / CPU load / user / usage</class></li>
-                    <li><span class="bold">Welche Umgebung? </span><span class="fragment">Java, NodeJS, .NET, deklarativ, DSL</span></li>
+                    <li><span class="bold">Cloud/OnPremise/Hybrid?</span> <span class="fragment"> ...?</span></li>
+                    <li>
+                        <span class="bold">Welcher Cloud Anbieter?</span>
+                        <span class="fragment">IBM, Amazon, Microsoft, Oracle, [Google], ...</span></li>
+                    <li><span class="bold">Plattformkonzept? </span><span class="fragment">Oracle à la Suite in the Cloud vs. Marketplace vs. Community based </span>
+                    </li>
+                    <li><span class="bold">Welches Preismodell? </span>
+                        <span class="fragment">Per device / message / CPU load / user / usage</span>
+                    </li>
+                    <li><span class="bold">Welche Umgebung? </span><span class="fragment">Java, NodeJS, .NET, deklarativ, DSL</span>
+                    </li>
                 </ul>
+
+                <aside class="notes">
+                    <ul>
+                        <li>überhaupt ein Cloudanbieter? Diese Frage ist für diesen Vortrag out-of-scope. Wenn jedoch
+                            eine Cloud / Hybrid Architektur gewählt wird, müssen die folgenden Fragen gestellt werden
+                        </li>
+                        <li>Was wir uns nicht angucken: HomeKit von Apple, Brillo von Alphabet,</li>
+                        <li>Anmerkung: Google ist aktuell nicht mit einem expliziten Angebot an Markt verteten. Wegen
+                            der Größe sollte dieses U jedoch nicht außer Acht gelassen werden
+                        </li>
+                        <li>Oracle: hat ehem on-premise Suite in die Cloud verschoben. Amazon: Hat großen Marketplace
+                            von Services, bietet selbst eher "Bausteine". Azure
+                        </li>
+                    </ul>
+                </aside>
             </section>
         </section>
 
         <section>
             <h3>Unser Weg zu noch mehr Fragen</h3>
             <ol>
-                <li>Marktteilnehmer</li>
-                <li>Technische Überlegungen</li>
-                <li>Geschäftliche Überlegungen</li>
+                <li>Marktteilnehmer
+                    <ul>
+                        <li>Amazon AWS</li>
+                        <li>MS Azure</li>
+                        <li>IBM Bluemix</li>
+                        <li>Oracle Cloud</li>
+                    </ul>
+                </li>
+                <li>Managementperspektive</li>
+                <li>Entwicklerperspektive</li>
                 <li>Fazit</li>
             </ol>
         </section>
 
         <section>
-            <section><h2>Vorstellung Marktteilnehmer</h2></section>
+            <section data-background="images/harbor.jpg">
 
-            <section><h3>Amazon AWS</h3></section>
-            <section>
-                <h3>Microsoft Azure</h3>
+                <h2 style="color: white;">&nbsp;<br>Vorstellung der Marktteilnehmer</h2>
+            </section>
+
+            <section><h3><a href="https://aws.amazon.com/iot/how-it-works/"
+                            target="_blank">Amazon AWS IoT</a></h3>
+                <img src="images/aws-iot-architecture.png" alt="" style="height:800px;">
             </section>
 
             <section>
-                <h3>IBM Bluemix</h3>
+                <ul>
+                    <li>HTTP & MQTT</li>
+                    <li>Bi-direktional</li>
+                    <li>Client Libraries + Gateways</li>
+                    <li>Betonen: Device Shadows & IoT API</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3><a href="https://portal.azure.com/#" target="_blank">Azure IoT Hub</a></h3>
+
+                <img src="images/azure-iot-reference-architecture.png"
+                     alt="azure iot architecture" style="height:800px;">
+
+                <aside class="notes">
+                    <p>admin zugriff 30 min max 3 leute</p>
+
+                    <p>für MS ist safe harbor irrelevant, da andere Zertifizierung</p>
+                </aside>
+            </section>
+
+            <section>
+                <ul>
+                    <li>HTTP, MQTT & <span class="bold">AMQP</span></li>
+                    <li>Bi-direktional
+                        <ul>
+                            <li>Hot path + cold path D2C</li>
+                            <li>TTL C2D Commands</li>
+                        </ul>
+                    </li>
+                    <li>Client Libraries + Gateways
+                        <ul>
+                            <li>C for many Linux distributions, Windows, and RTOS</li>
+                            <li>managed languages such as C#, Java, and JavaScript</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </section>
+
+            <section>
+                <h3 style="color:#244a61;">IBM Bluemix</h3>
+                <img src="images/bluemix-iot-architecture.svg" alt="" style="height:900px;">
+            </section>
+
+            <section>
+                <ul>
+                    <li>MQTT only
+                        <ul>
+                            <li>
+                                <a href="https://developer.ibm.com/answers/questions/18641/mqtt-message-broker-on-port-80.html"
+                                   target="_blank">firewall issues</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Bi-direktional</li>
+                    <li>Client Libraries, no Gateways
+                        <ul>
+                            <li>Client libraries auf Github Open-Sourced</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
             </section>
             <section>
                 <h3>Oracle Cloud</h3>
+                <img src="images/oracle-iot-architecture.png" alt="" style="height:800px;">
+            </section>
+
+            <section>
+                <ul>
+                    <li>HTTP(S) only</li>
+                    <li>Bi-Direktional
+                        <ul>
+                            <li>device-side polling</li>
+                        </ul>
+                    </li>
+                    <li>Client libraries
+                        <ul>
+                            <li>aktuell nur Java (1.5)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <aside class="notes">
+                    <p>Device polling erklären</p>
+                    <p>Java ME portierbarkeit erklären (Pläne von Oracle mit Gemalto)</p>
+                </aside>
+            </section>
+            <!--<section>
+                <h3>Google Cloud Computing</h3>
+
+                <p>Hat aktuell kein dediziertes IoT Angebot</p>
+
+                <p>Referenzieren auf ihre anderen Produkte</p>
+
+                <p>Hat aber einige IoT Geräte am Markt (primär Nest)</p>
+            </section>-->
+        </section>
+
+
+        <section>
+            <section>
+                <h2>Managementperspektive</h2>
+                <ul>
+                    <li>Preismodelle</li>
+                    <li>Security</li>
+                    <li>Lock-In Effekte</li>
+                    <li>Hybride Architekturen</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Security</h3>
+
+                <!--Comparison Table-->
+                <table width="100%" class="compare">
+                    <tr>
+
+                        <th>Oracle</th>
+                        <th>Azure</th>
+                        <th>AWS</th>
+                        <th>Bluemix</th>
+                    </tr>
+                    <tr>
+
+                        <td>?</td>
+                        <td>+++</td>
+                        <td>+</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+
+                        <td>todo</td>
+                        <td>Sehr gute Security <a
+                                href="https://www.timecockpit.com/blog/2015/09/30/Is-the-Cloud-Still-a-Safe-Harbor"
+                                target="_blank">MS Still safe after safe harbor</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+
+                <aside class="notes">
+                    <p>Azure: "Azure does process and transfer data not only under the Safe Harbor agreement.
+                        Additionally, Microsoft implements the EU Model Clauses. Microsoft is the first company to
+                        receive approval from the EU’s Article 29 Working Party for its strong contractual commitments
+                        to comply with EU privacy laws no matter where data is located"</p>
+                </aside>
             </section>
             <section>
-                <h3>Google Cloud Computing</h3>
+                <h3>Preismodelle</h3>
+            </section>
+            <section>
+                <h3>Lock-In Effekte</h3>
+            </section>
+            <section>
+                <h3>On-Premise vs. Cloud</h3>
             </section>
         </section>
 
         <section>
             <section>
-                <h2>Technische Überlegungen</h2>
+                <h2>Entwicklerperspektive</h2>
                 <ul>
+                    <li>Der Lernprozess</li>
                     <li>Modularität</li>
                     <li>Communityfaktor</li>
                     <li>Nutzen bestehender Skills</li>
+                    <li>(Coolness-Faktor)</li>
                 </ul>
                 <aside class="notes">
                     <pre>
@@ -134,47 +329,149 @@
                 </aside>
             </section>
             <section>
-                <h3></h3>
+                <h3>Lernprozess</h3>
+                <ul>
+                    <li>Tutorials / Onlinedokumentation</li>
+                    <li>Community Verfügbarkeit</li>
+                    <li>Trial Accounts</li>
+                </ul>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Tutorials: wie viele Ressourcen liegen im Netz</li>
+                        <li>Community: Wie viele Menschen befassen sich mit dem System? Stichwort Stackoverflow, Slack
+                            Chatrooms, Open-Source Mailinglists, Foren, ...
+                        </li>
+                        <li>Trial: Kann man einfach mal rumspielen ohne direkt die CC zücken zu müssen? Wenn ja, wie
+                            lange?
+                        </li>
+                    </ul>
+                </aside>
             </section>
+
+            <section><h4>Tutorials & Doku</h4>
+                <!--Comparison Table-->
+                <table width="100%" class="compare">
+                    <tr>
+
+                        <th>Oracle</th>
+                        <th>Azure</th>
+                        <th>AWS</th>
+                        <th>Bluemix</th>
+                    </tr>
+                    <tr>
+
+                        <td>+</td>
+                        <td>+++</td>
+                        <td>+++</td>
+                        <td>+++</td>
+                    </tr>
+                    <tr>
+
+                        <td><a href="https://cloud.oracle.com/en_US/iot?tabID=1441186548062" target="_blank">PDF &
+                            Vids</a>, nur Konzeptionell, keine konkreten Todos
+                        </td>
+                        <td>Gute Doku <a href="https://azure.microsoft.com/en-us/documentation/services/iot-hub/"
+                                         target="blank">Online</a></td>
+                        <td>Gute Doku <a href="https://aws.amazon.com/documentation/iot/" target="_blank">Online</a>,
+                            Viele Community Events (auch in D)
+                        </td>
+                        <td>Gute Doku <a href="https://www.ibm.com/cloud-computing/bluemix/solutions/iot/"
+                                         target="_blank">Online</a>, kleine Community aber vieles auf
+                            <a href="https://github.com/ibm-messaging" target="_blank">Github</a>!
+                        </td>
+                    </tr>
+
+                </table>
+
+                <aside class="notes">
+                    <p>Oracle ist bisher noch recht schwach, da noch nicht veröffentlicht. Setzen wenig auf Community
+                        Prinzip, eher Enterprise orientiert</p>
+
+                    <p>Azure: Sehr guten Lehrpfad erstellt. Diverse Videos, gute Integration mit eigener IDE</p>
+
+                    <p>AWS: Guter Lehrpfad, wenn etwas trockener als Azure. Diverse Ressourcen im Internet verfügbar,
+                        große Verbreitung. Zusätzlich Webcasts & in Berlin sogar eigenes Loft mit kostenlosem Support
+                        etc.</p>
+
+                    <p>Bluemix: Guter Lehrpfad, sehr cooler erster Einstieg, moderne UI, Step-by-step. Kleinere
+                        Community aber alles offen auf Github</p>
+                </aside>
+            </section>
+
+
             <section>
-                <h3></h3>
+                <h4>Community</h4>
+                <!--Comparison Table-->
+                <table width="100%" class="compare">
+                    <tr>
+
+                        <th>Oracle</th>
+                        <th>Azure</th>
+                        <th>AWS</th>
+                        <th>Bluemix</th>
+                    </tr>
+                    <tr>
+
+                        <td>+</td>
+                        <td>+++</td>
+                        <td>+++</td>
+                        <td>+++</td>
+                    </tr>
+                    <tr>
+
+                        <td>TODO</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+
             </section>
             <section>
                 <h3></h3>
             </section>
         </section>
 
-        <section>
-            <section>
-                <h2>Geschäftliche Überlegungen</h2>
-                <ul>
-                    <li>Preismodelle</li>
-                    <li>Lock-In Effekte</li>
-                </ul>
-            </section>
-            <section>
-                <h3></h3>
-            </section>
-            <section>
-                <h3></h3>
-            </section>
-            <section>
-                <h3></h3>
-            </section>
-        </section>
 
         <section>
             <h2>Fazit</h2>
 
             <p>Es gibt keinen idealen Cloudanbieter</p>
+
             <p>Alle Anbieter setzen auf REST und bieten APIs an</p><!--TODO Verify-->
             <p>Lizenzmodelle stark verschieden, kann abhängig vom Projekt starke Einflüsse auf Kosten haben</p>
+
             <p></p>
         </section>
 
+        <section>
+            <section><h2>Links</h2></section>
 
+            <section>
+                <h3>General</h3>
+                <a href="https://paolopatierno.wordpress.com/2015/10/13/an-iot-platforms-match-microsoft-azure-iot-vs-amazon-aws-iot/"
+                   target="_blank">Comparison Blogpost Azure vs. AWS</a>
 
+            </section>
 
+            <section>
+                <h3>Azure</h3>
+                <a href="https://blogs.microsoft.com/iot/2015/03/16/microsoft-announces-azure-iot-suite/"
+                   target="_blank">Azure introduces IoT Hub Technet Blogpost</a>
+                <a href="http://news.microsoft.com/convergence2015/" target="_blank">Convergence 2015 IoT Introduction
+                    starting at 15:00</a>
+                <a href="https://azure.microsoft.com/en-us/documentation/services/iot-hub/" target="_blank">Azure IoT
+                    Documentation</a>
+                <a href="https://azure.microsoft.com/en-us/documentation/articles/iot-hub-what-is-iot-hub/">IoT Hub
+                    Benefits</a>
+            </section>
+        </section>
+
+        <section data-background="#ff0000">
+            <h1>ENDE!!!!</h1>
+        </section>
 
 
         <!--OC SAMPLE SLIDES-->
@@ -227,26 +524,26 @@
             </section>
 
         </section>
-<section>
         <section>
-            <h2>Hier eine Auflistung:</h2>
-            <ul>
-                <li class="fragment">Ein Punkt nach</li>                
-                <li class="fragment">dem anderen</li>
-                <li class="fragment"><code>&lt;li class=&quot;fragment&quot;&gt;punkt&lt;/li&gt;</code></li>
-            </ul>
-        </section>
+            <section>
+                <h2>Hier eine Auflistung:</h2>
+                <ul>
+                    <li class="fragment">Ein Punkt nach</li>
+                    <li class="fragment">dem anderen</li>
+                    <li class="fragment"><code>&lt;li class=&quot;fragment&quot;&gt;punkt&lt;/li&gt;</code></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Eine andere Auflistung</h2> 
+            <section>
+                <h2>Eine andere Auflistung</h2>
 
-            <ol>
-                <li>eins</li>
-                <li>zwei</li>
-                <li>drei</li>
-            </ol>
+                <ol>
+                    <li>eins</li>
+                    <li>zwei</li>
+                    <li>drei</li>
+                </ol>
+            </section>
         </section>
-</section>
         <section>
             <section data-state="alert">
                 <h2>Powerpoint</h2>
@@ -287,9 +584,9 @@
 
             <section data-state="lila">
                 <code>&lt;section data-state=&quot;lila&quot;&gt;</code>
-            </section>            
+            </section>
 
-        </section>        
+        </section>
 
         <section>
             <h2>Steuern Sie mit Links zwischen den einzelnen Folien</h2>
@@ -304,79 +601,80 @@
                 <h2>Markdown support</h2>
 
                 <pre> <code>
-    &lt;section data-markdown&gt;
-        &lt;script type=&quot;text/template&quot;&gt;
-            ## Idee
+                    &lt;section data-markdown&gt;
+                    &lt;script type=&quot;text/template&quot;&gt;
+                    ## Idee
 
-            * Automatisierung der Beleuchtung in Gebäuden
-            * Speziell Licht in Gemeinschaftsräumen sowie privaten Räumen anhand von Events ein/ausschalten
-            * Events in Form von Bewohner kommt an / verlässt das Gebäude
-        &lt;/script&gt;
-    &lt;/section&gt;
+                    * Automatisierung der Beleuchtung in Gebäuden
+                    * Speziell Licht in Gemeinschaftsräumen sowie privaten Räumen anhand von Events ein/ausschalten
+                    * Events in Form von Bewohner kommt an / verlässt das Gebäude
+                    &lt;/script&gt;
+                    &lt;/section&gt;
                 </code> </pre>
             </section>
 
             <section data-markdown>
-    <script type="text/template">
-        ## Idee
+                <script type="text/template">
+                    ## Idee
 
-        * Automatisierung der Beleuchtung in Gebäuden
-        * Speziell Licht in Gemeinschaftsräumen sowie privaten Räumen anhand von Events ein/ausschalten
-        * Events in Form von Bewohner kommt an / verlässt das Gebäude
-    </script>
+                    * Automatisierung der Beleuchtung in Gebäuden
+                    * Speziell Licht in Gemeinschaftsräumen sowie privaten Räumen anhand von Events ein/ausschalten
+                    * Events in Form von Bewohner kommt an / verlässt das Gebäude
+                </script>
             </section>
 
             <section>
                 <h3>Markdown kann syntax highlights</h3>
                 <pre><code>
-            &lt;section data-markdown&gt;
-                &lt;script type=&quot;text/template&quot;&gt;
+                    &lt;section data-markdown&gt;
+                    &lt;script type=&quot;text/template&quot;&gt;
                     ### Loading native libraries in Java
 
                     ```java
 
-        try {
-            System.out.println(&quot;Loading Native Libraries:: Path: &quot; + System.getProperty(&quot;java.library.path&quot;));
-            //loading a library, there are two ways. but it only gets loaded once so doesnt matter if done twice here
-            System.loadLibrary(&quot;RCSwitchAdapter&quot;);
-            System.load(&quot;/usr/local/lib/libRCSwitchAdapter.so&quot;);
-            System.out.println(&quot;Loading Native Libraries:: loading librarys worked&quot;);
-            workingNativeCode = true;
-        } catch (UnsatisfiedLinkError e) {
-            e.printStackTrace();
-        }
+                    try {
+                    System.out.println(&quot;Loading Native Libraries:: Path: &quot; + System.getProperty(&quot;java.library.path&quot;));
+                    //loading a library, there are two ways. but it only gets loaded once so doesnt matter if done twice
+                    here
+                    System.loadLibrary(&quot;RCSwitchAdapter&quot;);
+                    System.load(&quot;/usr/local/lib/libRCSwitchAdapter.so&quot;);
+                    System.out.println(&quot;Loading Native Libraries:: loading librarys worked&quot;);
+                    workingNativeCode = true;
+                    } catch (UnsatisfiedLinkError e) {
+                    e.printStackTrace();
+                    }
 
-        }
-    }
+                    }
+                    }
                     ```
-                &lt;/script&gt;
-            &lt;/section&gt;</code> </pre>
-            </section>  
+                    &lt;/script&gt;
+                    &lt;/section&gt;</code> </pre>
+            </section>
 
-        <section data-markdown>
+            <section data-markdown>
                 <script type="text/template">
                     ### Java syntax highlights
 
                     ```java
 
-        try {
-            System.out.println("Loading Native Libraries:: Path: " + System.getProperty("java.library.path"));
-            //loading a library, there are two ways. but it only gets loaded once so doesnt matter if done twice here
-            System.loadLibrary("RCSwitchAdapter");
-            System.load("/usr/local/lib/libRCSwitchAdapter.so");
-            System.out.println("Loading Native Libraries:: loading librarys worked");
-            workingNativeCode = true;
-        } catch (UnsatisfiedLinkError e) {
-            e.printStackTrace();
-        }
+                    try {
+                    System.out.println("Loading Native Libraries:: Path: " + System.getProperty("java.library.path"));
+                    //loading a library, there are two ways. but it only gets loaded once so doesnt matter if done twice here
+                    System.loadLibrary("RCSwitchAdapter");
+                    System.load("/usr/local/lib/libRCSwitchAdapter.so");
+                    System.out.println("Loading Native Libraries:: loading librarys worked");
+                    workingNativeCode = true;
+                    } catch (UnsatisfiedLinkError e) {
+                    e.printStackTrace();
+                    }
 
-        }
-    }
+                    }
+                    }
                     ```
                 </script>
             </section>
 
-    </section>
+        </section>
 
 
         <section>
@@ -395,9 +693,11 @@
         </section>
 
         <section>
-            <h2>Weitere Konfigurationen:</h2> 
+            <h2>Weitere Konfigurationen:</h2>
             <code>revealjsConfig.js</code>
-            <p>for settings see here: <a href="https://github.com/hakimel/reveal.js#configuration">git config desc</a> </p>
+
+            <p>for settings see here: <a href="https://github.com/hakimel/reveal.js#configuration">git config desc</a>
+            </p>
         </section>
 
         <section>
@@ -435,7 +735,6 @@
                 <script type="text/javascript" src="js/cameraAccess.js"></script>
             </section>
         </section>
-        
 
 
         <section>
@@ -449,9 +748,13 @@
         <section>
             <h2>Bei Fragen:</h2>
             <br>
-            <p><a target="_blank" href="https://portal.opitz-consulting.de/mysite/Person.aspx?accountname=OCGM%5CPBR"> Pascal Brokmeier (PBR)</a></p>
+
+            <p><a target="_blank" href="https://portal.opitz-consulting.de/mysite/Person.aspx?accountname=OCGM%5CPBR">
+                Pascal Brokmeier (PBR)</a></p>
             <br>
-            <p>Wer mir einen gefallen tun will  &#9733; das Repo auf Github, damit ich sehe ob und wie viel die Vorlage genutzt wird. Auch sind Updates dann besser zu verteilen. </p>
+
+            <p>Wer mir einen gefallen tun will  &#9733; das Repo auf Github, damit ich sehe ob und wie viel die Vorlage
+                genutzt wird. Auch sind Updates dann besser zu verteilen. </p>
 
         </section>
 
