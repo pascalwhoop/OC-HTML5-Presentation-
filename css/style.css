@@ -59,7 +59,7 @@ body {
     }
 }
 
-@media screen and (max-width: 980) {
+@media screen and (max-width: 980px) {
     .reveal{
         font-size: 80px;
     }
