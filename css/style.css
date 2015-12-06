@@ -259,3 +259,41 @@ span.caption{
 body section .bold {
     font-weight: 700;
 }
+
+.slides li li{
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.slides li li li{
+    font-size: 0.6em;
+    margin-bottom: 0;
+}
+
+table.compare {
+    border-collapse: collapse;
+    border: 1px solid lightgray;
+}
+
+table.compare td, table.compare th{
+    border: 1px solid darkgray;
+    padding: 10px;
+    text-align: center;
+}
+
+table.compare th{
+    background: #ADD8E6;
+}
+table.compare td{
+    background: #e7f6ff;
+    color: #244a61;
+}
+
+.cover-white-background {
+    background: rgba(255,255,255,0.8);
+    /*min-width: 400px;*/
+}
+
+.table-logo {
+    height:80px;
+}

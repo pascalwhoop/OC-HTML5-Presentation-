@@ -34,6 +34,8 @@
             ;
         } );
 
+
+
         head.js('https://hakim-static.s3.amazonaws.com/reveal-js/remotes.ne.min.js');
     }
 })(window);
