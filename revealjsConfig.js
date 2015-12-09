@@ -9,6 +9,7 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: true,
+    showNotes: true,
 
     transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 

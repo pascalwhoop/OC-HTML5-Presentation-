@@ -41,6 +41,18 @@
 
     <div class="slides">
 
+
+        <section>
+            <div style="float: right; width: 60%">
+                <h2>Herzlich Willkommen zur</h2>
+
+                <h1>Ruhr JUG</h1>
+
+                <h3>10.12.2015</h3>
+            </div>
+            <img src="images/rubina_welcome.png" alt="" height="650px">
+        </section>
+
         <section>
             <h1>IoT Cloud Comparison</h1>
 
@@ -154,7 +166,9 @@
                 </ul>
 
                 <aside class="notes">
-                    <p>Besonders in Anführungsstrichen, da Amazon diese features besonders betont, sie jedoch nicht allzu ungewöhnlich sind.</p>
+                    <p>Besonders in Anführungsstrichen, da Amazon diese features besonders betont, sie jedoch nicht
+                        allzu ungewöhnlich sind.</p>
+
                     <p>Device Shadows ist ein Marketing Begriff für Queueing und Caching</p>
                 </aside>
             </section>
@@ -240,6 +254,7 @@
 
                 <aside class="notes">
                     <p>Device polling erklären</p>
+
                     <p>Java ME portierbarkeit erklären (Pläne von Oracle mit Gemalto)</p>
                 </aside>
             </section>
@@ -261,7 +276,9 @@
                 <ul>
                     <li>Security</li>
                     <li>Preismodelle</li>
-                    <li>Lock-In Effekte</li>
+                    <!--
+                                        <li>Lock-In Effekte</li>
+                    -->
                     <li>Hybride Architekturen</li>
                 </ul>
             </section>
@@ -272,7 +289,7 @@
                 <!--Comparison Table-->
                 <table width="100%" class="compare">
                     <tr>
-
+                        <th></th>
                         <th>Oracle</th>
                         <th>Azure</th>
                         <th>AWS</th>
@@ -280,31 +297,69 @@
                     </tr>
                     <tr>
 
-                        <td>?</td>
+                        <td></td>
+                        <td>++</td>
                         <td>+++</td>
-                        <td>+</td>
-                        <td>?</td>
+                        <td>++</td>
+                        <td>++</td>
                     </tr>
                     <tr>
-
-                        <td>todo</td>
-                        <td>Sehr gute Security <a
-                                href="https://www.timecockpit.com/blog/2015/09/30/Is-the-Cloud-Still-a-Safe-Harbor"
-                                target="_blank">MS Still safe after safe harbor</a></td>
-                        <td>Seit Safe harbor</td>
+                        <td>Technisch</td>
                         <td></td>
+                        <td></td>
+                        <td>AWS IAM</td>
+                        <td>salted & hashed</td>
+                    </tr>
+                    <tr>
+                        <td>Politisch</td>
+                        <td><a href="http://www.reuters.com/article/us-oracle-nsa-idUSBREA0T05U20140130"
+                               target="_blank">Ellison claims security</a>
+                            <a href="http://www.crn.com/news/applications-os/240165811/oracle-ceo-ellison-says-database-customers-shouldnt-fear-nsa-spying.htm"
+                               target="_blank">[2]</a>. <a
+                                    href="http://www.oracle.com/us/corporate/contracts/cloud-services/index.html"
+                                    target="_blank">Auch EUMC</a></td>
+                        <td>Sehr gute Security,
+                            <a
+                                    href="https://www.timecockpit.com/blog/2015/09/30/Is-the-Cloud-Still-a-Safe-Harbor"
+                                    target="_blank">MS uses EU model clause</a></td>
+                        <td>
+                            <a href="http://www.v3.co.uk/v3-uk/news/2433779/amazon-web-services-to-open-first-uk-data-centre-post-safe-harbour-ruling"
+                               target="_blank">AWS @ UK post safe-harbour</a></td>
+                        <td>
+                            <a href="http://www.datacenterknowledge.com/archives/2015/10/16/heres-ibms-data-center-strategy-for-bluemix-paas/"
+                               target="_blank">Bluemix soon EUMC, too</a></td>
                     </tr>
 
                 </table>
+                <br>
+
+                <p>Alle: TLS, X.509, symmetric keys</p>
+
+                <p>AWS, Azure, IBM claim EU model clause als Alternative zu Safe Harbor</p>
 
                 <aside class="notes">
+                    <p>Azure Tech: TLS, X.509 Zertifikat auf Serverseite. Symmetrische Keys, werden nie über
+                        Kommunikationskanal versandt (können [sollen] also auch nicht remote verändert werden)</p>
+
+                    <p>AWS: IAM für Mobile Phones etc. Login mit FB u.a. 3rd Party Applikationen</p>
+
                     <p>Azure: "Azure does process and transfer data not only under the Safe Harbor agreement.
                         Additionally, Microsoft implements the EU Model Clauses. Microsoft is the first company to
                         receive approval from the EU’s Article 29 Working Party for its strong contractual commitments
                         to comply with EU privacy laws no matter where data is located"</p>
+
+                    <p>Azure: Alexander Becker, Managing Consultant bei OC kennt Hintergründe bei Azure aus vergangenen
+                        Projekten. MS Steht im Rechtsstreit gegen NSA und wehrt sich offen gegen Zugriffe auf
+                        Kundendaten. Deswegen als einzige 3+++</p>
+
+                    <p>NSA: Situation ungeklärt, da ggf. durch Patriot Act Daten erfragen können, unabhängig davon wo
+                        sie gespeichert sind. Einziger sichere Weg wäre, wenn selbst MS/AWS/IBM/.. selbst keinen Zugriff
+                        auf Kundendaten hätten</p>
+
+                    <p>AWS & Azure berufen sich auf EU Model Clause. IBM Ebenfalls, jedoch ist Bluemix noch nicht teil
+                        dessen</p>
                 </aside>
             </section>
-
 
 
             <section>
@@ -322,33 +377,109 @@
                     <tr>
 
                         <td>?</td>
-                        <td>+++</td>
-                        <td>+</td>
-                        <td>?</td>
+                        <td>++</td>
+                        <td>++</td>
+                        <td>++</td>
                     </tr>
                     <tr>
 
-                        <td>todo</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Keine Informationen öffentlich</td>
+                        <td>Preis in Paketen</td>
+                        <td>Preise abhängig von Datentransfer</td>
+                        <td>Preise in Paketen, danach pro MB / Device</td>
                     </tr>
 
                 </table>
 
                 <aside class="notes">
-                    <p>Azure: "Azure does process and transfer data not only under the Safe Harbor agreement.
-                        Additionally, Microsoft implements the EU Model Clauses. Microsoft is the first company to
-                        receive approval from the EU’s Article 29 Working Party for its strong contractual commitments
-                        to comply with EU privacy laws no matter where data is located"</p>
+                    Azure ist günstiger als AWS wenn die Nachrichtenkapazität ausgereizt wird. AWS ist gerade am Anfang
+                    bei wenigen Nachrichten günstig.
+
+                    <h2>Azure</h2>
+
                 </aside>
             </section>
 
+            <section>
+                <h4>Azure Pricing</h4>
+                <!--Azure Pricing Table-->
+                <table width="100%" class="compare">
+                    <thead>
+                    <tr>
+                        <th>Edition Type</th>
+                        <th>Price (per month)</th>
+                        <th>Total number of Messages/day</th>
+                        <th>Message meter size</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Free</td>
+                        <td>
+
+                            Free
+                        </td>
+                        <td>8,000</td>
+                        <td>0.5 KB</td>
+                    </tr>
+                    <tr>
+                        <td>S1</td>
+                        <td>
+
+                            <span class="price-data" data-amount="25">€21.09</span></td>
+                        <td>400,000</td>
+                        <td>4 KB</td>
+                    </tr>
+                    <tr>
+                        <td>S2</td>
+                        <td>
+
+                            <span class="price-data" data-amount="250">€210.83</span></td>
+                        <td>6,000,000</td>
+                        <td>4 KB</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
 
             <section>
+                <h4>AWS Pricing</h4>
+
+                <p class="bold">$5 per million messages (512 byte-block)</p>
+                <hr>
+
+                <ul>
+                    <li class="fragment">100 sensors, one 400-byte message per minute D2C</li>
+
+                    <li class="fragment">100 devices * 1 message * 60 minutes * 24
+                        hours * 30 days
+                    </li>
+                    <li class="fragment">4.3 million messages per month, $21.50 monthly AWS IoT cost for
+                        message publishing.
+                    </li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h4>Bluemix Pricing</h4>
+
+                <p class="bold">Bronze: 100 active devices + 100MB transfer + 1GB Storage = $20</p>
+                <hr>
+                <ul>
+                    <li class="fragment">100 sensors, 1x 400byte msg / min D2C</li>
+                    <li class="fragment">100 * 0.000381 Mbyte * 60 * 24 * 30 = 1645 MByte / Month</li>
+                    <li class="fragment">$0.01 / MByte exchanged → $15.45 for Datatransfers. $35.45 in total per month
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!--<section>
                 <h3>Lock-In Effekte</h3>
 
-                <!--Comparison Table-->
+                &lt;!&ndash;Comparison Table&ndash;&gt;
                 <table width="100%" class="compare">
                     <tr>
 
@@ -382,46 +513,24 @@
                         receive approval from the EU’s Article 29 Working Party for its strong contractual commitments
                         to comply with EU privacy laws no matter where data is located"</p>
                 </aside>
-            </section>
+            </section>   -->
 
             <section>
                 <h3>Hybride Architekturen</h3>
 
-                <!--Comparison Table-->
-                <table width="100%" class="compare">
-                    <tr>
+                <p>Alle Anbieter haben REST API's um mit beliebigen Applikationen zu interagieren. HTTPS via TSL ist
+                    Standard</p>
 
-                        <th>Oracle</th>
-                        <th>Azure</th>
-                        <th>AWS</th>
-                        <th>Bluemix</th>
-                    </tr>
-                    <tr>
-
-                        <td>?</td>
-                        <td>+++</td>
-                        <td>+</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-
-                        <td>todo</td>
-                        <td>Sehr gute Security <a
-                                href="https://www.timecockpit.com/blog/2015/09/30/Is-the-Cloud-Still-a-Safe-Harbor"
-                                target="_blank">MS Still safe after safe harbor</a></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                </table>
+                <p>Anbindungen an eigene Services sind offensichtlich vereinfacht möglich</p>
 
                 <aside class="notes">
-                    <p>Azure: "Azure does process and transfer data not only under the Safe Harbor agreement.
-                        Additionally, Microsoft implements the EU Model Clauses. Microsoft is the first company to
-                        receive approval from the EU’s Article 29 Working Party for its strong contractual commitments
-                        to comply with EU privacy laws no matter where data is located"</p>
+                    Amazon berechnet jeden Datentransfer (in & out). Werden also alle Daten wieder out geleitet ist
+                    Kostenfaktor x2.
+
+                    <p>Kostenlos für AWS endpoints: Lambda, DynamoDB, S3, Kinesis, Kinesis Firehose, SNS and SQS</p>
                 </aside>
             </section>
+
         </section>
 
         <section>
@@ -429,8 +538,7 @@
                 <h2>Entwicklerperspektive</h2>
                 <ul>
                     <li>Lernprozess & Communityfaktor</li>
-                    <li>Modularität</li>
-                    <li>(Nutzen bestehender Skills)</li>
+                    <li>Nutzen bestehender Skills</li>
                     <li>(Coolness-Faktor)</li>
                 </ul>
                 <aside class="notes">
@@ -540,7 +648,8 @@
                     <tr>
 
                         <td><img src="images/stackoverflow-logo.png" alt="" class="table-logo"></td>
-                        <td><a href="http://stackoverflow.com/search?q=oracle+iot+-sql+-index+-table" target="_blank">0*</a></td>
+                        <td><a href="http://stackoverflow.com/search?q=oracle+iot+-sql+-index+-table"
+                               target="_blank">0*</a></td>
                         <td><a href="http://stackoverflow.com/search?q=azure+iot" target="_blank">79</a></td>
                         <td><a href="http://stackoverflow.com/search?q=aws+iot" target="_blank">24</a></td>
                         <td><a href="http://stackoverflow.com/search?q=bluemix+iot" target="_blank">112</a></td>
@@ -549,27 +658,36 @@
                     <tr>
                         <td><img src="images/google-logo.png" alt="" class="table-logo"></td>
                         <td>
-                            <a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+oracle+%2Biot+" target="_blank">367</a>
+                            <a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+oracle+%2Biot+"
+                               target="_blank">367</a>
                         </td>
-                        <td><a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+azure+%2Biot+" target="_blank">119</a></td>
-                        <td><a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+aws+%2Biot+" target="_blank">146</a></td>
-                        <td><a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+bluemix+%2Biot+" target="_blank">1320</a></td>
+                        <td>
+                            <a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+azure+%2Biot+"
+                               target="_blank">119</a></td>
+                        <td>
+                            <a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+aws+%2Biot+"
+                               target="_blank">146</a></td>
+                        <td>
+                            <a href="https://www.google.de/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=tutorial+bluemix+%2Biot+"
+                               target="_blank">1320</a></td>
                     </tr>
 
                 </table>
 
                 <aside class="notes">
                     <p>Stackoverflow: Gesucht nach azure + iot, oder bluemix + iot oder oracle + iot</p>
-                    <p>Google: gesucht nach: "tutorial bluemix +iot" oder "tutorial azure +iot". Das + bedeutet, dass es auf jeden Fall vorkommen muss.</p>
+
+                    <p>Google: gesucht nach: "tutorial bluemix +iot" oder "tutorial azure +iot". Das + bedeutet, dass es
+                        auf jeden Fall vorkommen muss.</p>
                 </aside>
 
             </section>
 
-            <section><h3>Modularität</h3>
+            <section>
+                <h4>Trial Accounts</h4>
                 <!--Comparison Table-->
                 <table width="100%" class="compare">
                     <tr>
-
                         <th>Oracle</th>
                         <th>Azure</th>
                         <th>AWS</th>
@@ -583,13 +701,14 @@
                         <td>+++</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Aktuell keine Verfügbar, soll sich ggf ändern</td>
+                        <td>Kostenlos bis 8k msg/Tag</td>
+                        <td>AWS Free Tier: 250k msg/month für 12 Monate</td>
+                        <td>Free bis 20 Devices + 100MB Traffic</td>
                     </tr>
 
                 </table>
+
 
             </section>
 
@@ -605,19 +724,32 @@
                     </tr>
                     <tr>
 
-                        <td>?</td>
-                        <td>?</td>
-                        <td>?</td>
-                        <td>?</td>
+                        <td>+</td>
+                        <td>+++</td>
+                        <td>+++</td>
+                        <td>++</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Java</td>
+                        <td>.NET, C, NodeJS, Java</td>
+                        <td>C, NodeJS, Java</td>
+                        <td>C, NodeJS, Java, Python, <a href="https://github.com/ibm-messaging?page=2" target="_blank">[many
+                            more specifics]</a></td>
                     </tr>
-
                 </table>
+
+                <aside class="notes">
+                    <p>Oracle 1 Plus, da nur Java support. Zwar ist Oracle bei vielen Java Devs bekannt, die
+                        Cloudprodukte sind aber alle neu</p>
+
+                    <p>Azure hat guten Device Support. Azure ist lange genug etabliert und es gibt genug spezialisten.
+                        Bestehende Infrastruktur kann einfach eingebunden werden</p>
+
+                    <p>AWS selbe wie Azure</p>
+
+                    <p>Bluemix ist unbekannt. Aber große Menge an Beispielen Open-Source auf Github macht
+                        Implementierung einfach. Schnell wachsende Community für Unbekanntheit</p>
+                </aside>
 
             </section>
 
@@ -652,7 +784,8 @@
         </section>
 
         <section>
-            <section data-background="images/inspire-IT.jpg" class="cover-white-background"><h2>Technisches Intermezzo</h2></section>
+            <section data-background="images/inspire-IT.jpg" class="cover-white-background"><h2>Technisches
+                Intermezzo</h2></section>
 
 
         </section>
@@ -663,13 +796,15 @@
                 <h2>Fazit</h2>
                 <ul>
                     <li><p class="bold">Es gibt keinen idealen IoT Cloudanbieter</p></li>
-                    <li><p>Alle Anbieter setzen auf REST und bieten APIs an</p></li>
-                    <li><p>Lizenzmodelle stark verschieden, kann abhängig vom Projekt starke Einflüsse auf Kosten haben</p></li>
-                    <li><p>Oracle muss insbesondere bzgl. Endgerätesupport nachholen. Es gibt eine Welt abseits von Java</p></li>
+                    <li><p>Alle Anbieter setzen auf REST und bieten APIs an. Viele können MQTT</p></li>
+                    <li><p>Lizenzmodelle stark verschieden, kann abhängig vom Projekt starke Einflüsse auf Kosten
+                        haben</p></li>
+                    <li><p>Oracle muss insbesondere bzgl. Endgerätesupport und Learning nachholen. Es gibt eine Welt abseits von
+                        Java</p></li>
                     <li>Open-Source / Community Ansatz bei heterogener Gerätemarktstruktur unablässig</li>
                 </ul>
             </section>
-            
+
             <section>
                 <h3>Gruppenfazit</h3>
                 <ul>
@@ -681,16 +816,29 @@
                 </ul>
             </section>
         </section>
-        
+
 
         <section>
             <section><h2>Links</h2></section>
 
             <section>
                 <h3>General</h3>
-                <a href="https://paolopatierno.wordpress.com/2015/10/13/an-iot-platforms-match-microsoft-azure-iot-vs-amazon-aws-iot/"
-                   target="_blank">Comparison Blogpost Azure vs. AWS</a>
 
+                <p>
+                    <a href="https://paolopatierno.wordpress.com/2015/10/13/an-iot-platforms-match-microsoft-azure-iot-vs-amazon-aws-iot/"
+                       target="_blank">Comparison Blogpost Azure vs. AWS</a></p>
+
+
+            </section>
+
+            <section><h3>Security</h3>
+
+                <p><a href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-security-identity.html"
+                      target="_blank">Amazon AWS IoT Security</a></p>
+
+                <p>
+                    <a href="http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?infotype=SA&subtype=ST&htmlfid=KUJ12416USEN"
+                       target="_blank">Bluemix not yet EUMC verified</a></p>
             </section>
 
             <section>
